@@ -89,7 +89,7 @@ void test() {
 }
 
 int main() {
-	long long n = 0;
+	unsigned long long n = 0;
 	cin >> n;
 	//cout << fibonacci_sum_naive(n);
 	//test();
