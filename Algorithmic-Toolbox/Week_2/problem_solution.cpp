@@ -1,4 +1,10 @@
-/*The problem and the solution was made by me. It is not from the course assignment list*/
+/* The problem and the solution was made by me. It is not from the course assignment list.
+
+Task/Задача:
+EN: Find out mod 20 of the sum of every third element of the Fibonacci sequence of n 
+(F(m1) + F(m2) + … + F(m), 0 <= m <= n & m%3 = 0) mod 20.
+RU: Найти и вывести на экран остаток от деления на 20 суммы каждого третьего элемента 
+последовательности чисел Фибоначчи от n (F(m1) + F(m2) + … + F(m), 0 <= m <= n & m%3 = 0) mod 20.*/
 
 #include "stdafx.h" //Для Microsoft Visual Studio
 #include <iostream>
@@ -23,19 +29,19 @@ int fibonacci_sum_naive(unsigned long long n) {
 			sum += current;
 	}
 
-	return sum % 10;
+	return sum % 20;
 }
 
-/* Функция для вычисления суммы остатков при делении на 10 каждого третьего
+/* Функция для вычисления суммы остатков при делении на 20 каждого третьего
 члена последовательности Фибоначчи. */
 int fib_mods_sum_func(int& n) {
 	if (n < 2)
 		return 0;
 	vector<int> fib_mod_vector = { 0,1 };
 	int count(1), sum(0);
-	//Заполняем вектор остатками от деления на 10 значений последовательности Фибоначчи.
+	//Заполняем вектор остатками от деления на 20 значений последовательности Фибоначчи.
 	for (int i = 2; i <= n; i++)
-		fib_mod_vector.push_back((fib_mod_vector[i - 2] + fib_mod_vector[i - 1] % 10) % 10);
+		fib_mod_vector.push_back((fib_mod_vector[i - 2] + fib_mod_vector[i - 1] % 20) % 20);
 	//Суммируем каждый третий элемент вектора.
 	for (auto fib : fib_mod_vector) {
 		if (count % 3 == 0)
@@ -49,9 +55,9 @@ int fib_mods_sum_func(int& n) {
 int fibonacci_sum_fast(unsigned long long n) {
 	if (n < 2)
 		return 0;
-	/* Длина периода последовательности Фибоначчи по модулю 10 равна 60 
+	/* Длина периода последовательности Фибоначчи по модулю 20 равна 60 
 	(подробнее смотрите Периоды Пизано). Для решения задачи достаточно просто
-	вычислить сумму остатков при делении на 10 нужных нам значение последовательности Фибоначчи
+	вычислить сумму остатков при делении на 20 нужных нам значение последовательности Фибоначчи
 	в одном периоде. Затем помножить результат на количество периодов и прибавить сумму
 	неучтенных остатков в оставшемся неполном периоде (если такой есть).*/
 	int pisano_period_10 = 60;
@@ -63,13 +69,13 @@ int fibonacci_sum_fast(unsigned long long n) {
 	int sum_in_period = fib_mods_sum_func(pisano_period_10);
 	int sum_left = fib_mods_sum_func(new_n);
 
-	return (num_of_periods*sum_in_period + sum_left) % 10;
+	return (num_of_periods*sum_in_period + sum_left) % 20;
 }
 
 void test() {
 	//Проверяем на известных значениях
 	assert(fibonacci_sum_naive(0) == 0);
-	assert(fibonacci_sum_naive(12) == 6);
+	assert(fibonacci_sum_naive(12) == 16);
 	assert(fibonacci_sum_naive(60) == 0);
 	assert(fibonacci_sum_naive(70) == 7);
 	//Сравниваем результаты простого и быстрого алгоритмов на небольших значениях
@@ -84,10 +90,10 @@ void test() {
 
 int main() {
 	long long n = 0;
-	cin >> n;
+	//cin >> n;
 	//cout << fibonacci_sum_naive(n);
-	//test();
-	cout << fibonacci_sum_fast(n);
+	test();
+	//cout << fibonacci_sum_fast(n);
 }
 
 
