@@ -3,10 +3,9 @@ Coursera Specialization (by University of California, San Diego &amp; Higher Sch
 
 Here I am going to publish my opinion about this specialization and short review of each course. I AM NOT GOING TO PUBLISH ANYTHING THAT VIALATES THE COURSERA RULES (TESTS, PROBLEMS AND THEIR SOLUTIONS). Only GENERAL info and invented by me problems based on the course ideas. Language: EN & RU.
 
-List of coursers:
-Algorithmic Toolbox
 
-Official description of the Specialization
+
+#Official description of the Specialization.
 https://www.coursera.org/specializations/data-structures-algorithms
 
 This specialization is a mix of theory and practice: you will learn algorithmic
