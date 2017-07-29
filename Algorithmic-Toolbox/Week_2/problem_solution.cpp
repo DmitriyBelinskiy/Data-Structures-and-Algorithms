@@ -74,10 +74,10 @@ int fibonacci_sum_fast(unsigned long long n) {
 
 void test() {
 	//Проверяем на известных значениях
-	assert(fibonacci_sum_naive(0) == 0);
-	assert(fibonacci_sum_naive(12) == 16);
-	assert(fibonacci_sum_naive(60) == 0);
-	assert(fibonacci_sum_naive(70) == 7);
+	assert(fibonacci_sum_fast(0) == 0);
+	assert(fibonacci_sum_fast(12) == 16);
+	assert(fibonacci_sum_fast(60) == 0);
+	assert(fibonacci_sum_fast(70) == 7);
 	//Сравниваем результаты простого и быстрого алгоритмов на небольших значениях
 	for (unsigned long long i = 0; i < 94; i++) {
 		cout << "i = " << i << ", summ_n = " << fibonacci_sum_naive(i) << ", summ_f = " << fibonacci_sum_fast(i) << endl;
