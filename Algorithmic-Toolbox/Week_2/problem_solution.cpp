@@ -12,7 +12,7 @@ RU: Найти и вывести на экран остаток от деления на 20 суммы каждого третьего эле
 #include <vector>
 using namespace std;
 
-//Медленный и неэффективный алгоритм.
+//Простой, но медленный и неэффективный алгоритм.
 int fibonacci_sum_naive(unsigned long long n) {
 	if (n <= 1)
 		return 0;
