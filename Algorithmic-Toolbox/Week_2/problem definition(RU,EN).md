@@ -1,6 +1,6 @@
 # Task/Задача: 
-EN: Find out mod 20 of the sum of every third element of the Fibonacci sequence of n ((F(m1) + F(m2) + … + F(m), (0 <= m <= n) & (m mod 3 = 0)) mod 20).
-RU: Найти и вывести на экран остаток от деления на 20 суммы каждого третьего элемента последовательности чисел Фибоначчи от n ((F(m1) + F(m2) + … + F(m), (0 <= m <= n) & (m mod 3 = 0)) mod 20).
+EN: Find out mod 20 of the sum of every third element of the Fibonacci sequence of n ((F(m1) + F(m2) + … + F(m), (0 <= m <= n) & (m mod 3 = 0)), mod 20).
+RU: Найти и вывести на экран остаток от деления на 20 суммы каждого третьего элемента последовательности чисел Фибоначчи от n ((F(m1) + F(m2) + … + F(m), (0 <= m <= n) & (m mod 3 = 0)), mod 20).
 
 
 Пояснения:
